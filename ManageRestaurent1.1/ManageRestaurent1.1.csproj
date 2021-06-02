@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +49,137 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mainForm.cs">
+    <Compile Include="class\bill.cs" />
+    <Compile Include="class\Global.cs" />
+    <Compile Include="Form\Table\TableList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainForm.Designer.cs">
+    <Compile Include="Form\Table\TableList.Designer.cs">
+      <DependentUpon>TableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\tableState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\tableState.Designer.cs">
+      <DependentUpon>tableState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucMenuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucMenuBar.Designer.cs">
+      <DependentUpon>ucMenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\emptyTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\emptyTable.Designer.cs">
+      <DependentUpon>emptyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\manageFood\editFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\manageFood\editFood.Designer.cs">
+      <DependentUpon>editFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\Menu.cs" />
+    <Compile Include="class\hoaDon.cs" />
+    <Compile Include="class\mangageTable.cs" />
+    <Compile Include="userControl\TableInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\TableInfo.Designer.cs">
+      <DependentUpon>TableInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\itemMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\itemMenu.Designer.cs">
+      <DependentUpon>itemMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucEditFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucEditFood.Designer.cs">
+      <DependentUpon>ucEditFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucFood.Designer.cs">
+      <DependentUpon>ucFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\manageFood\addFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\manageFood\addFood.Designer.cs">
+      <DependentUpon>addFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\manageFood\addTypeFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\manageFood\addTypeFood.Designer.cs">
+      <DependentUpon>addTypeFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\Food.cs" />
+    <Compile Include="Form\Control\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Control\mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Form\Control\manageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Control\manageMenu.Designer.cs">
+      <DependentUpon>manageMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\My_DB.cs" />
+    <Compile Include="class\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="mainForm.resx">
+    <Compile Include="userControl\typeFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\typeFood.Designer.cs">
+      <DependentUpon>typeFood.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Table\TableList.resx">
+      <DependentUpon>TableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\tableState.resx">
+      <DependentUpon>tableState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucMenuBar.resx">
+      <DependentUpon>ucMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\emptyTable.resx">
+      <DependentUpon>emptyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\manageFood\editFood.resx">
+      <DependentUpon>editFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\TableInfo.resx">
+      <DependentUpon>TableInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\itemMenu.resx">
+      <DependentUpon>itemMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucEditFood.resx">
+      <DependentUpon>ucEditFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucFood.resx">
+      <DependentUpon>ucFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\manageFood\addFood.resx">
+      <DependentUpon>addFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\manageFood\addTypeFood.resx">
+      <DependentUpon>addTypeFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Control\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Control\manageMenu.resx">
+      <DependentUpon>manageMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +189,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="userControl\typeFood.resx">
+      <DependentUpon>typeFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,8 +208,92 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="image\" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Order-512-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soft-drink-28-755196-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_add_food_food_add_cloche_cook_kitchen_tools_food_restaurant-512-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soft-drink-28-755196-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus3.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loveSoMuch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girlseiza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R761daaf030ce2cd50fe728adda34dba4-removebg-preview7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mylove %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mylove %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\images.jpg" />
+    <None Include="image\images-removebg-preview %281%29.png" />
+    <None Include="image\1289317-removebg-preview.png" />
+    <None Include="image\cash-512-removebg-preview.png" />
+    <None Include="image\167_clock-time-date-management-nonstop-annual-512-removebg-preview - Copy.png" />
+    <Content Include="image\custom-tools-edit-demo-512-removebg-preview.png" />
+    <None Include="image\images-removebg-preview.png" />
+    <None Include="image\expand-foodDelivery_2px-14-512-removebg-preview.png" />
+    <None Include="image\Rab01b0e99e6089d02c0957dafe4decba-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
