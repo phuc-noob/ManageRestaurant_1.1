@@ -79,6 +79,17 @@ namespace ManageRestaurent1._1
             return dt;
             db.closeConnection();
         }
+        public int getfidBlabel(string label)
+        {
+            db.OpenConnection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("select id from food where label =@label", db.getConnection);
+            cmd.Parameters.Add("@label", SqlDbType.NVarChar).Value = label;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            return int.Parse(dt.Rows[0]["id"].ToString());
+            db.closeConnection();
+        }
         public DataTable getFoodByLabel(string label)
         {
             db.OpenConnection();

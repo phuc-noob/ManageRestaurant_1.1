@@ -46,7 +46,6 @@ namespace ManageRestaurent1._1
         
         private void guna2GradientTileButton_label_Click(object sender, EventArgs e)
         {
-            
             string label = guna2GradientTileButton_label.Text;
             DataTable dt = f.getFoodByLabel(label);
             
@@ -62,6 +61,18 @@ namespace ManageRestaurent1._1
                         t.label_cost.Text = (j * int.Parse(t.label_amount.Text)).ToString();
                     }
                 }
+
+                for(int i =0;i < Global.billFood.Rows.Count; i++)
+                {
+                    if(Global.billFood.Rows[i]["label"].ToString()==label)
+                    {
+                        int sl = int.Parse(Global.billFood.Rows[i]["sl"].ToString()) + 1;
+                        Global.billFood.Rows[i]["sl"] =sl;
+                        Global.total = int.Parse(mainForm.menuBar.label_total.Text);
+                        mainForm.menuBar.label_total.Text = (int.Parse(mainForm.menuBar.label_total.Text) + int.Parse(Global.billFood.Rows[i]["price"].ToString())).ToString();
+                    }
+                }
+                
             }
             else
             {
@@ -74,9 +85,28 @@ namespace ManageRestaurent1._1
                 Global.location_YmenuItem += 60;
                 t.Top = Global.location_YmenuItem;
                 t.Left = locationX;
-                //t.Left = 20;
                 mainForm.temp.Controls.Add(t);
                 Menu.menuitem.Add(t);
+
+                int id = Global.bill_id;
+                int f_id = f.getfidBlabel(dt.Rows[0]["label"].ToString());
+                int price = int.Parse(dt.Rows[0]["cost"].ToString());
+                string flabel = dt.Rows[0]["label"].ToString();
+                int sl = 1;
+                int giamgia = 1;
+                int index = Global.billFood.Rows.Count;
+                DataRow workRow;
+                workRow = Global.billFood.NewRow();
+                
+                workRow["id"] = id;
+                workRow["f_id"] = f_id;
+                workRow["price"] = price;
+                workRow["label"] = flabel;
+                workRow["sl"] = sl;
+                workRow["giamgia"] = giamgia;
+                Global.billFood.Rows.Add(workRow);
+                mainForm.menuBar.label_total.Text =(int.Parse(mainForm.menuBar.label_total.Text)+price).ToString();
+                Global.total = int.Parse(mainForm.menuBar.label_total.Text);
             }
             Menu.lName.Add(label);
         }

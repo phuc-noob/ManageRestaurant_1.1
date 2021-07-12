@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ManageRestaurent1._1.Account" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAUAAAAAEAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAA=</HashCode>
+      <FileName>class\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.bill" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQgAAQAAAABAABAAAABAAAAAABABCAAAA=</HashCode>
+      <FileName>class\bill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Ca" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\Ca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.DiemDanh" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAwEAAAAAgAAAAAIABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\DiemDanh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Employee" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAMAIAAABAAAYIAAAAAAAAAAAAgEAg=</HashCode>
+      <FileName>class\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Food" Collapsed="true">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAACAIQAAAAAAIAAAAAAAAQCAAAAAAAAAAAgAA=</HashCode>
+      <FileName>class\Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Global" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIACAABCCAABAAgAQAAAAAAAAAAAAAAEAAAAIAAAA=</HashCode>
+      <FileName>class\Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.hoaDon" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\hoaDon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Job" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\Job.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Luong" Collapsed="true">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAEAAAAAAAAAAAAAAAABACAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>class\Luong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.manageTable" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAQAAAAAIAAIAAAACAAAAAAACIAAAAAAAA=</HashCode>
+      <FileName>class\mangageTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Menu" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAQAAA=</HashCode>
+      <FileName>class\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.My_DB" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAQAAAQAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\My_DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.myDB" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAQAAAAAQAAAAAAAAABAAAAA=</HashCode>
+      <FileName>class\myDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.PhanCa" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAIAQgAgAAEAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>class\PhanCa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Program" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>class\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.User" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.mainForm" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UIxACKADSCAAABBAEBKCC5wSCRQCACaABAACAABAAAI=</HashCode>
+      <FileName>Form\Control\mainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.addEmployeeForm_1" Collapsed="true">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAgAABAAAAAAIMAAkIFgICEAAClAFABAAAQAEAgCE=</HashCode>
+      <FileName>Form\Employee\addEmployeeForm(1.1).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.changePasswordForm_1" Collapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIBAAABCAAggBAACAAAAIACAAACgAAAAAAAQBABAAA=</HashCode>
+      <FileName>Form\Employee\changePasswordForm(1.1).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.checkInAndOutForm_1" Collapsed="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEQAAAAABAAABIMAAkIEAACRAAClIHCAACAAAUAwiE=</HashCode>
+      <FileName>Form\Employee\checkInAndOutForm(1.1).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.checkInAndOutForm" Collapsed="true">
+    <Position X="4" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAABIABAAAQBIAAECBAAAAIBAAAAAAAAAAgA=</HashCode>
+      <FileName>Form\Employee\checkInAndOutForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.createAccountForm" Collapsed="true">
+    <Position X="4" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIBAAAACAAAABAAEAIAQAACAAACgAAAAQQAAAIBAAA=</HashCode>
+      <FileName>Form\Employee\createAccountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.editEmployeeForm" Collapsed="true">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggABAABBAgIMIAkIVAICEAAClAFAABAAAAEAgCE=</HashCode>
+      <FileName>Form\Employee\editEmployeeForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.formManageEmployee_1" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABICiAAGgBAAiAACQrIhgACICACAAAAYAQCQAAMQBA=</HashCode>
+      <FileName>Form\Employee\formManageEmployee(1.1).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.loginForm_1" Collapsed="true">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAJgAAAAAAAAAAAAAAAAAASAAAAAAAAAQAAAQIAAAE=</HashCode>
+      <FileName>Form\Employee\loginForm(1.1).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.manageSalaryForm" Collapsed="true">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABBCgAAEhBAQCAADQBKBAACEiJCCADAIEAiUAAMAhA=</HashCode>
+      <FileName>Form\Employee\manageSalaryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.manageShiftForm" Collapsed="true">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABAAABAgBABgKQSwAIIAUKQGEiAADBAACiAIGAQjU=</HashCode>
+      <FileName>Form\Employee\manageShiftForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.numberOfEmployeeForm" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IYABCAAAEAAIDJAAEAAKAAMCAAICgAGIAAIAAAEBAAA=</HashCode>
+      <FileName>Form\Employee\numberOfEmployeeForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.addFood" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAiAAICEAAFAAgAyACAACAAAQAAQwRACAAAAAAAI=</HashCode>
+      <FileName>Form\manageFood\addFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.addTypeFood" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAIAAiAAAACQAAAAABQBAGAAAAAACA=</HashCode>
+      <FileName>Form\manageFood\addTypeFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.checkCheatedForm" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAIAAACIAAAkBBgACEAQCAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>Form\manageFood\checkCheatedForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.cooker" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAQACAAAACAACACAAAAAAAIAQQAAAAAAAA=</HashCode>
+      <FileName>Form\manageFood\cooker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.editFood" Collapsed="true">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIACACAAICEAAFAAoAyACAACAAAQAAQwQAAAAAAAABI=</HashCode>
+      <FileName>Form\manageFood\editFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.Pay" Collapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAACAQABAAAACAICCCAAAAAAEIAQQAAACAQAI=</HashCode>
+      <FileName>Form\Table\Pay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.TableList" Collapsed="true">
+    <Position X="5.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQECAAABAgAACAACACCAAAAAAICQAAAABAAAA=</HashCode>
+      <FileName>Form\Table\TableList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.emptyTable" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\emptyTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.itemEmployee" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAACSAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\itemEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.itemMenu" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAAADAAiDACAACAAAACAQBAACAABAAACAAAEAA=</HashCode>
+      <FileName>userControl\itemMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.scheduleItem" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAAAgAAACAAACCAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>userControl\scheduleItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.scheduleListItem" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADgAAAAKAAgAIEAACAIACCAAAEAAgAAAAAAAAgAgE=</HashCode>
+      <FileName>userControl\scheduleListItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.scheduleListWorkingItem" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADgAAAAKAAgAIEAACAIACCAAAEAAgAAAAAAAgAAgE=</HashCode>
+      <FileName>userControl\scheduleListWorkingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.staticMonth" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACQAABAAAACAAAgCAAAgAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>userControl\staticMonth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.TableInfo" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABAAASCAgBAAAAKAAAQCAAACAAFAGQAAAABAAAI=</HashCode>
+      <FileName>userControl\TableInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.tableState" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAEACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\tableState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.typeFood" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACAAADACAACAAAGEAIgAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\typeFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.ucEditFood" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgEDACEAAAAAAASAAAACAACAEAAQAIAAAAAgAAA=</HashCode>
+      <FileName>userControl\ucEditFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.ucFood" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEDCCAAABAAAASAAAACAAAAMAAQAAAAAAAgAAA=</HashCode>
+      <FileName>userControl\ucFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.ucMenuBar" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAACAAABAAAACAAACCAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\ucMenuBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageRestaurent1._1.@ucstatic" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACQAABAAAAGAAAACEAAgAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>userControl\ucstatic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

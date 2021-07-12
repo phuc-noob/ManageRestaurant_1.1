@@ -21,8 +21,52 @@ namespace ManageRestaurent1._1
             return dt;
             db.closeConnection();
         }
+        public bool setEmptyTable(int id)
+        {
+            db.OpenConnection();
+            SqlCommand command = new SqlCommand("UPDATE infotable SET id_bill=@bid, total =@total,amount =@amount,status =@status, checkin =@checkin where id =@id", db.getConnection);
 
 
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@bid", SqlDbType.Int).Value = 0;
+            command.Parameters.Add("@total", SqlDbType.Float).Value = 0;
+            command.Parameters.Add("@amount", SqlDbType.Int).Value = 0;
+            command.Parameters.Add("@status", SqlDbType.Int).Value = 0;
+            command.Parameters.Add("@checkin", SqlDbType.DateTime).Value = DateTime.Now;
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public DataTable getCurentTableBytbid(int id)
+        {
+            db.OpenConnection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("select * from infotable where id =@id and status = 1", db.getConnection);
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            return dt;
+            db.closeConnection();
+        }
+        public DataTable getTablebyBillid(int id)
+        {
+            db.OpenConnection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("select * from infotable where id_bill =@id", db.getConnection);
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            return dt;
+            db.closeConnection();
+        }
         public bool updateBillTable(int id, int b_id, float total, int amount, int status, DateTime checkin)
         {
             db.OpenConnection();

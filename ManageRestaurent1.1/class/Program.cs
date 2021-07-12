@@ -17,9 +17,9 @@ namespace ManageRestaurent1._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            mainForm mForm = new mainForm();
-            Application.Run(mForm);
+            loginForm_1 login = new loginForm_1();
+            //mainForm mForm = new mainForm();
+            Application.Run(login);
         }
         static Menu menu =new Menu();
     }

@@ -18,6 +18,7 @@ namespace ManageRestaurent1._1
         }
         manageTable mtb = new manageTable();
         manageTable tb = new manageTable();
+        bill b = new bill();
         int locationx = 20;
         int locationy = 20;
         private void TableList_Load(object sender, EventArgs e)
@@ -53,18 +54,32 @@ namespace ManageRestaurent1._1
 
         private void guna2Button_save_Click(object sender, EventArgs e)
         {
-                
+            try {  
                 int tb_id = tb.getIdByLabel(Global.tableNumber);
-                int b_id = 0;
+                int b_id = Global.bill_id;
                 int status = 1;
                 int amount = int.Parse(this.guna2NumericUpDown_amount.Value.ToString());
                 float total = 10;
                 DateTime checkin = DateTime.Now;
-                tb.updateBillTable(tb_id, b_id, total, amount, status, checkin);
-            //} catch (Exception ex)
-            //{
-            //    MessageBox.Show("nothing");
-            //}
+
+                for(int index=0;index <Global.billFood.Rows.Count; index++)
+                {
+                    int id =int.Parse(Global.billFood.Rows[index]["id"].ToString());
+                    int fid =int.Parse(Global.billFood.Rows[index]["f_id"].ToString());
+                    int price =int.Parse(Global.billFood.Rows[index]["price"].ToString());
+                    string label =Global.billFood.Rows[index]["label"].ToString();
+                    int sl =int.Parse(Global.billFood.Rows[index]["sl"].ToString());
+                    int giamgia =int.Parse(Global.billFood.Rows[index]["giamgia"].ToString());
+                    b.insertFoodToBill(id,fid,price,sl,label,giamgia,0);
+                }
+                tb.updateBillTable(tb_id, b_id, Global.total, amount, status, checkin);
+                this.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Choice Table To Change","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
     }
 }

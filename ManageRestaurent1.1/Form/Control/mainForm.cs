@@ -18,11 +18,14 @@ namespace ManageRestaurent1._1
         {
             InitializeComponent();
         }
+        Guna2GradientTileButton GpanelOpenFood;
         Guna2GradientPanel GpanelOpen;
         Guna2GradientPanel GpanelClose;
+        Guna2GradientButton Gclose;
         Food food = new Food();
         List<ucFood> menu = new List<ucFood>();
         manageTable tb = new manageTable();
+        bill Bill = new bill();
         //Guna2GradientPanel temp = new Guna2GradientPanel();
         public static Guna2GradientPanel temp
         {
@@ -50,35 +53,79 @@ namespace ManageRestaurent1._1
         static Menu menuFood;
         private void Button_Foods_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                if (GpanelOpenFood != null)
+                {
+                    GpanelOpenFood.Checked = false;
+                }
+               
+            }catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                GpanelOpenFood = listF;
+                GpanelOpenFood.Checked = true;
+            }
+            
+            
             // tạo danh sách hóa đơn món ăn
             menuFood = new Menu();
-
-            //----------------------------------
+            Gclose.Checked = false;
+            Gclose = Button_Foods;
+            Gclose.Checked = true;
             Button_Table.Checked = false;
             Button_Foods.Checked = true;
             GpanelClose.Visible = false;
             GpanelOpen = Panel_Foods;
             GpanelOpen.Visible = true;
+            //----------------------------------
+            if (!Global.isMangage)
+            {
+                addF.Visible = false;
+                listF.Visible = false;
+                EditF.Visible = false;
+
+            }
+            
             GpanelClose = Panel_Foods;
+
+            guna2GradientTileButton_ListFood_Click(sender, e);
         }
 
         private void Button_Table_Click(object sender, EventArgs e)
         {
-
+            Gclose.Checked = false;
+            Gclose = Button_Table;
+            Gclose.Checked = true;
             Button_Foods.Checked = false;
             Button_Table.Checked = true;
             GpanelClose.Visible = false;
             GpanelOpen = Panel_Table;
             GpanelOpen.Visible = true;
             GpanelClose = Panel_Table;
+
+            Global.location_YmenuItem = 110;
+            panelMain.Controls.Clear();
+            this.Controls.Remove(panelMain);
+            this.mainForm_Load(sender, e);
         }
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            if(!Global.isMangage)
+            {
+                staticBt.Visible = false;
+            }    
+            Gclose = Button_Table;
+            Global.bill_id = Bill.getb_bill().Rows.Count;
             Global.location_YmenuItem = 110;
             panelMain = new Guna2GradientPanel();
             panelMain.Dock = DockStyle.Fill ;
-
+            panelMain.BackColor = Color.White;
             temp = new Guna2GradientPanel();
             temp.Dock = DockStyle.Right;
             this.Button_Table.Checked = true;
@@ -105,6 +152,15 @@ namespace ManageRestaurent1._1
                 user_tb.label_tbName.Text = dt_table.Rows[i]["label"].ToString();
                 user_tb.Top = y;
                 user_tb.Left = x;
+                user_tb.label_total.Text = dt_table.Rows[i]["total"].ToString();
+                if (dt_table.Rows[i]["status"].ToString() == "1")
+                {
+                    DateTime time = DateTime.Parse(dt_table.Rows[i]["checkin"].ToString());
+                    user_tb.label_checkin.Text = time.ToString("HH:mm");
+                }
+                
+                
+                user_tb.label_amount.Text = dt_table.Rows[i]["amount"].ToString();
                 if (x < 1000)
                 {
                     x += 327;
@@ -122,7 +178,7 @@ namespace ManageRestaurent1._1
             this.Controls.Add(panelMain);
             //this.FillTablePanel();
             GpanelOpen = Panel_Table;
-            GpanelOpen.Visible = true;
+            GpanelOpen.Visible =false;
             GpanelClose = Panel_Table;
             
         }
@@ -158,13 +214,26 @@ namespace ManageRestaurent1._1
 
         private void guna2GradientTileButton7_Click(object sender, EventArgs e)
         {
+            GpanelOpenFood.Checked = false;
+            GpanelOpenFood = addF;
+            GpanelOpenFood.Checked = true;
             addFood aFood = new addFood();
             aFood.Show();
         }
-
+        public static ucMenuBar menuBar = new ucMenuBar();
 
         public void guna2GradientTileButton_ListFood_Click(object sender, EventArgs e)
         {
+            GpanelOpenFood.Checked = false;
+            GpanelOpenFood = listF;
+            GpanelOpenFood.Checked = true;
+            Global.billFood = new DataTable();
+            Global.billFood.Columns.Add("id", typeof(System.Int32));
+            Global.billFood.Columns.Add("f_id", typeof(System.Int32));
+            Global.billFood.Columns.Add("price", typeof(System.Int32));
+            Global.billFood.Columns.Add("label", typeof(System.String));
+            Global.billFood.Columns.Add("sl", typeof(System.Int32));
+            Global.billFood.Columns.Add("giamGia", typeof(System.Int32));
             Global.location_YmenuItem = 30;
             // tạo danh sách món ăn tạm thời
             temp = new Guna2GradientPanel();
@@ -184,6 +253,7 @@ namespace ManageRestaurent1._1
             //temp.Dock = DockStyle.Right;
             temp.Top = 80;
             temp.Left = 1000;
+            temp.BackColor = Color.DarkKhaki;
             mainForm.temp.Width = 650;
             temp.Height = 800;
             
@@ -193,7 +263,7 @@ namespace ManageRestaurent1._1
             mainForm.panelMain.Controls.Clear();
             mainForm.panelMain.Dock = DockStyle.Fill;
             mainForm.panelMain.Controls.Add(temp);
-            mainForm.panelMain.BackColor = Color.Blue;
+            mainForm.panelMain.BackColor = Color.White;
             DataTable tbFood = food.getFood();
             for (int i = 0; i < tbFood.Rows.Count; i++)
             {
@@ -216,16 +286,18 @@ namespace ManageRestaurent1._1
                 mainForm.panelMain.Controls.Add(fItem);
                 //locationY += 100;
             }
-            ucMenuBar menu = new ucMenuBar();
-            menu.Top = 583;
-            menu.Left = 2;
-            mainForm.temp.Controls.Add(menu);
-
-
+            
+            menuBar.Top = 583;
+            menuBar.Left = 2;
+            menuBar.label_total.Text = "00000";
+            mainForm.temp.Controls.Add(menuBar);
         }
-
+        
         private void guna2GradientTileButton_edit_Click(object sender, EventArgs e)
         {
+            GpanelOpenFood.Checked = false;
+            GpanelOpenFood = EditF;
+            GpanelOpenFood.Checked = true;
             int locationX = 150;
             int locationY = 131;
             panelMain.Controls.Clear();
@@ -236,7 +308,7 @@ namespace ManageRestaurent1._1
                 if (locationX >= panelMain.Width - fItem.Width)
                 {
                     locationY += 210;
-                    locationX = 40;
+                    locationX = 150;
                 }
 
                 byte[] pic = (byte[])tbFood.Rows[i]["picture"];
@@ -254,41 +326,23 @@ namespace ManageRestaurent1._1
         }
         public Guna2GradientTileButton getEditFood()
         {
-            return guna2GradientTileButton_edit;
+            return EditF;
         }
 
         private void guna2GradientTileButton1_Click(object sender, EventArgs e)
         {
+            Gclose.Checked = false;
+            Gclose = guna2GradientTileButton_NhanVien;
+            Gclose.Checked = true;
+            cooker cook = new cooker();
+            mainForm.panelMain.Controls.Clear();
+            cook.Show();
 
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
-            //int x = 28;
-            //int y = 10;
-            //for (int i = 0; i <5; i++)
-            //{
-            //    TableInfo table = new TableInfo();
-
-
-
-            //    if (x < 500)
-            //    {
-            //        x = x + 200;
-            //        table.Left = x;
-            //        table.Top = y;
-            //    }
-            //    else
-            //    {
-            //        x = 28;
-            //        y += 10;
-            //        table.Left = x;
-            //        table.Top = y;
-            //    }
-
-
-            //    this.Controls.Add(table);
-            //}
+            
         }
 
         private void guna2GradientTileButton_addTable_Click(object sender, EventArgs e)
@@ -302,6 +356,85 @@ namespace ManageRestaurent1._1
             panelMain.Controls.Clear();
             this.Controls.Remove(panelMain);
             this.mainForm_Load(sender,e);
+        }
+
+        private void guna2GradientTileButton_employee_Click(object sender, EventArgs e)
+        {
+            // Button_Table.Checked = false;
+            //Button_Foods.Checked = true;
+            Gclose.Checked = false;
+            Gclose = guna2GradientTileButton_employee;
+            Gclose.Checked = true;
+            guna2GradientTileButton_employee.Checked =true;
+            GpanelClose.Visible = false;
+            GpanelOpen = Panel_Foods;
+            GpanelOpen.Visible = true;
+            GpanelClose = Panel_Foods;
+
+            int locationX = 200;
+            int locationY = 200;
+            mainForm.panelMain.BackColor = Color.White;
+            mainForm.panelMain.Controls.Clear();
+            if (Global.isMangage)
+            {
+                List<string> lfunction = new List<string>() {
+                "CheckIn / Out",
+                "Change Password",
+                "Manage Employee",
+                "Manage Salary",
+                "Manage Shift",
+                "Login",
+                };
+                for (int i = 0; i < 6; i++)
+                {
+                    //locationY += 100;
+                    itemEmployee employee = new itemEmployee();
+                    employee.guna2Button.Text = lfunction[i];
+                    employee.Top = locationY;
+                    employee.Left = locationX;
+                    mainForm.panelMain.Controls.Add(employee);
+                    locationX += 200;
+                }
+            }
+            else
+            {
+                List<string> lfunction = new List<string>() {
+                "CheckIn / Out",
+                "Change Password",
+                //"Manage Employee",
+                //"Manage Salary",
+                //"Manage Shift",
+                "Login",
+                };
+
+                for (int i = 0; i < 3; i++)
+                {
+                    //locationY += 100;
+                    itemEmployee employee = new itemEmployee();
+                    employee.guna2Button.Text = lfunction[i];
+                    employee.Top = locationY;
+                    employee.Left = locationX;
+                    mainForm.panelMain.Controls.Add(employee);
+                    locationX += 200;
+                }
+            }
+            
+            
+           
+        }
+
+        private void guna2GradientTileButton_static_Click(object sender, EventArgs e)
+        {
+            mainForm.panelMain.Controls.Clear();
+            mainForm.panelMain.BackColor = Color.White;
+            bill b = new bill();
+            Gclose.Checked = false;
+            Gclose = staticBt;
+            Gclose.Checked = true;
+            ucstatic sta = new ucstatic();
+            sta.Top = 85;
+            sta.Left = 150;
+            mainForm.panelMain.Controls.Add(sta);
         }
     }
 }

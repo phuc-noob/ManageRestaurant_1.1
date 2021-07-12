@@ -32,6 +32,7 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label_total = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2Button1
@@ -71,9 +72,9 @@
             this.label_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_total.Location = new System.Drawing.Point(91, 20);
             this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(125, 25);
+            this.label_total.Size = new System.Drawing.Size(84, 25);
             this.label_total.TabIndex = 2;
-            this.label_total.Text = "000000 vnđ";
+            this.label_total.Text = "000000";
             // 
             // label1
             // 
@@ -86,11 +87,22 @@
             this.label1.Text = "Tổng :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(185, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "vnđ";
+            // 
             // ucMenuBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_total);
             this.Controls.Add(this.guna2Button2);
@@ -106,7 +118,8 @@
 
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.Label label_total;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label_total;
+        public System.Windows.Forms.Label label2;
     }
 }
